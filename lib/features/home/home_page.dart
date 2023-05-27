@@ -45,6 +45,13 @@ class HomePage extends StatelessWidget {
                 context.push(AppRouter.imagesFromDbPath);
               },
             ),
+            AppSpacing.verticalSpacing32,
+            ElevatedButton(
+              child: const Text('Sample'),
+              onPressed: () {
+                context.push(AppRouter.samplePath);
+              },
+            ),
           ],
         ),
       ),

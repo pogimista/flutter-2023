@@ -3,6 +3,7 @@ import 'package:boilerplate/features/demo/view/assets_page.dart';
 import 'package:boilerplate/features/demo/view/images_from_db_page.dart';
 import 'package:boilerplate/features/dog_image_random/view/dog_image_random_page.dart';
 import 'package:boilerplate/features/home/home_page.dart';
+import 'package:boilerplate/features/sample/sample_page.dart';
 import 'package:boilerplate/features/setting/setting_page.dart';
 import 'package:boilerplate/generated/l10n.dart';
 import 'package:boilerplate/widgets/error_page.dart';
@@ -29,6 +30,9 @@ class AppRouter {
 
   static const String imagesFromDbNamed = 'imagesFromDb';
   static const String imagesFromDbPath = '/imagesFromDb';
+
+  static const String sampleName = 'sampleName';
+  static const String samplePath = '/sampleName';
 
   static GoRouter get router => _router;
   static final _router = GoRouter(
@@ -59,6 +63,11 @@ class AppRouter {
         name: dogImageRandomNamed,
         path: dogImageRandomPath,
         builder: (context, state) => const DogImageRandomPage(),
+      ),
+      GoRoute(
+        name: sampleName,
+        path: samplePath,
+        builder: (context, state) => const SamplePage(),
       ),
       GoRoute(
         name: imagesFromDbNamed,
