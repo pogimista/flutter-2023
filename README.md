@@ -310,6 +310,15 @@ setUp(() {
 ## If you want to understand architecture or any packages used in this project, you can create a discussion on github repo.
 ## And feel free to create a pull request !
 
+setup
+
+flutter pub get
+flutter pub run intl_utils:generate
+flutter pub run build_runner build --delete-conflicting-outputs
+
+Whenever change freezed file, assets, api
+flutter pub get && flutter pub run build_runner build --delete-conflicting-outputs
+
 
 
 
