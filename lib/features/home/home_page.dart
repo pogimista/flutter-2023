@@ -13,23 +13,43 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       key: const Key(WidgetKeys.homeScaffoldKey),
       appBar: AppBar(
-        title: Text(S.of(context).home),
+        title: Text("Kubeta", style: TextStyle(
+          fontSize: 61,
+          color: Colors.orange,
+          backgroundColor: Colors.lime
+        )),
       ),
       body: Center(
         child: Column(
           children: [
-            ElevatedButton(
-              child: Text(S.of(context).dog_image_random),
-              onPressed: () {
-                context.push(AppRouter.dogImageRandomPath);
-              },
+            Visibility(
+              visible: true,
+              child: ElevatedButton(
+                child: Text(S.of(context).dog_image_random),
+                onPressed: () {
+                  context.push(AppRouter.dogImageRandomPath);
+                },
+              ),
             ),
             AppSpacing.verticalSpacing32,
-            ElevatedButton(
-              child: Text(S.of(context).setting),
-              onPressed: () {
-                context.push(AppRouter.settingPath);
-              },
+            Row(
+              children: [
+                ElevatedButton(
+                  child: Text(S.of(context).setting),
+                  onPressed: () {
+                    context.push(AppRouter.settingPath);
+                  },
+
+                ),
+                ElevatedButton(
+                  child: Text(S.of(context).setting),
+                  onPressed: () {
+                    context.push(AppRouter.settingPath);
+                  },
+
+                ),
+
+              ],
             ),
             AppSpacing.verticalSpacing32,
             ElevatedButton(
@@ -47,9 +67,16 @@ class HomePage extends StatelessWidget {
             ),
             AppSpacing.verticalSpacing32,
             ElevatedButton(
-              child: const Text('Sample'),
+              child: const Text('Sample Tae'),
               onPressed: () {
                 context.push(AppRouter.samplePath);
+              },
+            ),
+            AppSpacing.verticalSpacing32,
+            ElevatedButton(
+              child: const Text('Qr Code'),
+              onPressed: () {
+                context.push(AppRouter.qrCodePath);
               },
             ),
           ],
